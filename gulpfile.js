@@ -1,5 +1,6 @@
 var gulp   = require('gulp')
   , hbs    = require('gulp-handlebars')
+  , myth   = require('gulp-myth')
   , concat = require('gulp-concat')
   , uglify = require('gulp-uglify')
   , jshint = require('gulp-jshint');
@@ -28,16 +29,21 @@ gulp.task('build', function() {
     .pipe(gulp.dest('client'));
 
   gulp.src([
-    'client/lib/exoskeleton.js'
-  , 'client/lib/handlebars.js'
-  , 'client/templates.js'
-  , 'client/application.js'
-  , 'client/models.js'
-  , 'client/views.js'
-  , 'client/router.js'
+    'client/javascripts/lib/exoskeleton.js'
+  , 'client/javascripts/lib/handlebars.js'
+  , 'client/javascripts/templates.js'
+  , 'client/javascripts/application.js'
+  , 'client/javascripts/models.js'
+  , 'client/javascripts/views.js'
+  , 'client/javascripts/router.js'
   ])
     .pipe(concat('app.js'))
     .pipe(gulp.dest('public/javascripts'));
+
+  gulp.src('client/stylesheets/*.css')
+    .pipe(myth())
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest('public/stylesheets'));
 
 });
 
