@@ -4632,7 +4632,4 @@ var Backbone = Backbone || {};
   , test: function() { }
   });
 
-  new App.Router();
-  Backbone.history.start();
-
 }(App);
