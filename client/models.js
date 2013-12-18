@@ -1,9 +1,6 @@
 // TODO: Remove once models are defined.
 /* jshint unused: false */
 
-var App = App || {};
-var Backbone = Backbone || {};
-
-!function(App) {
+!function(App, Backbone) {
   'use strict';
-}(App);
+}(window.App, window.Backbone);

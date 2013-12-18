@@ -1,4 +1,4 @@
-var App = App || {};
+window.App = window.App || {};
 
-App.models = {};
-App.views = {};
+window.App.models = {};
+window.App.views = {};

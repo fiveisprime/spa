@@ -1,27 +1,24 @@
-var App = App || {};
-var Backbone = Backbone || {};
-
-!function(App) {
+!function(App, Backbone) {
 
   'use strict';
 
   App.Router = Backbone.Router.extend({
     routes: {
-      '': 'index'
-    , 'test': 'test'
-    }
+      '': 'index',
+      'test': 'test'
+    },
 
     //
     // Initialize and render the index view.
     //
-  , index: function() {
+    index: function() {
       new App.views.Index();
-    }
+    },
 
     //
     // TODO: Add more views to the router.
     //
-  , test: function() { }
+    test: function() { }
   });
 
-}(App);
+}(window.App, window.Backbone);

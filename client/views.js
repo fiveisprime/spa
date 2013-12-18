@@ -1,18 +1,15 @@
-var App = App || {};
-var Backbone = Backbone || {};
-
-!function(App) {
+!function(App, Backbone) {
   'use strict';
 
   App.views.Index = Backbone.View.extend({
-    el: document.querySelector('.container')
-  , template: App.templates.index
-  , initialize: function() {
+    el: document.querySelector('.container'),
+    template: App.templates.index,
+    initialize: function() {
       this.render();
-    }
-  , render: function() {
+    },
+    render: function() {
       this.el.innerHTML = this.template({ title: 'spa' });
     }
   });
 
-}(App);
+}(window.App, window.Backbone);

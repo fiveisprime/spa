@@ -854,6 +854,8 @@ legend span {
 /* User Styles
    =========== */
 
+html, body { height: 100%; }
+
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {}
 

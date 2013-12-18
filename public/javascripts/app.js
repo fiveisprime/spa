@@ -4572,64 +4572,55 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</p>\n";
   return buffer;
   });
-var App = App || {};
+window.App = window.App || {};
 
-App.models = {};
-App.views = {};
+window.App.models = {};
+window.App.views = {};
 
 // TODO: Remove once models are defined.
 /* jshint unused: false */
 
-var App = App || {};
-var Backbone = Backbone || {};
-
-!function(App) {
+!function(App, Backbone) {
   'use strict';
-}(App);
+}(window.App, window.Backbone);
 
-var App = App || {};
-var Backbone = Backbone || {};
-
-!function(App) {
+!function(App, Backbone) {
   'use strict';
 
   App.views.Index = Backbone.View.extend({
-    el: document.querySelector('.container')
-  , template: App.templates.index
-  , initialize: function() {
+    el: document.querySelector('.container'),
+    template: App.templates.index,
+    initialize: function() {
       this.render();
-    }
-  , render: function() {
+    },
+    render: function() {
       this.el.innerHTML = this.template({ title: 'spa' });
     }
   });
 
-}(App);
+}(window.App, window.Backbone);
 
-var App = App || {};
-var Backbone = Backbone || {};
-
-!function(App) {
+!function(App, Backbone) {
 
   'use strict';
 
   App.Router = Backbone.Router.extend({
     routes: {
-      '': 'index'
-    , 'test': 'test'
-    }
+      '': 'index',
+      'test': 'test'
+    },
 
     //
     // Initialize and render the index view.
     //
-  , index: function() {
+    index: function() {
       new App.views.Index();
-    }
+    },
 
     //
     // TODO: Add more views to the router.
     //
-  , test: function() { }
+    test: function() { }
   });
 
-}(App);
+}(window.App, window.Backbone);
