@@ -22,7 +22,7 @@ gulp.task('lint', function() {
 
 gulp.task('build', function() {
 
-  gulp.src('templates/*.hbs')
+  gulp.src('client/templates/*.hbs')
     .pipe(hbs({ namespace: 'App.templates' }))
     .pipe(concat('templates.js'))
     .pipe(gulp.dest('client'));
