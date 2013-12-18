@@ -50,7 +50,11 @@ gulp.task('compress', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['client/*.js', '!client/templates.js'], function() { gulp.run('lint', 'build'); });
+  gulp.watch([
+    'client/*.js'
+  , 'client/templates/*.hbs'
+  , '!client/templates.js'
+  ], function() { gulp.run('lint', 'build'); });
 });
 
 gulp.task('default', function() {
