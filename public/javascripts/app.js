@@ -4606,8 +4606,6 @@ var Backbone = Backbone || {};
 
 }(App);
 
-/* jshint unused: false */
-
 var App = App || {};
 var Backbone = Backbone || {};
 
@@ -4625,7 +4623,7 @@ var Backbone = Backbone || {};
     // Initialize and render the index view.
     //
   , index: function() {
-      var index = new App.views.Index();
+      new App.views.Index();
     }
 
     //
@@ -4634,7 +4632,7 @@ var Backbone = Backbone || {};
   , test: function() { }
   });
 
-  var router = new App.Router();
+  new App.Router();
   Backbone.history.start();
 
 }(App);
