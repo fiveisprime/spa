@@ -1,5 +1,5 @@
 {
-  "name": "exp",
+  "name": "spa",
   "version": "0.0.0",
   "scripts": {
     "start": "node app",

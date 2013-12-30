@@ -1,3 +1,9 @@
+//
+//     Project Name
+//     Copyright(c) 2013 Author Name <Author Email>
+//     MIT Licensed
+//
+
 var express = require('express')
   , http    = require('http')
   , path    = require('path');
@@ -23,7 +29,8 @@ if ('development' === app.get('env')) {
   app.use(express.errorHandler());
 }
 
-require('./routes')(app);
+var controllers = require('./server/controllers')();
+require('./server/routes')(app, controllers);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
