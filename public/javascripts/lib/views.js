@@ -13,7 +13,7 @@ function($, Backbone, _, Collections) {
 
   var Index = Backbone.View.extend({
     el: '.container',
-    template: Backbone.templates.index,
+    template: Handlebars.templates.index,
     initialize: function() {
       this.render();
     },
