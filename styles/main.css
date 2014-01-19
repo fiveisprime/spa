@@ -1,0 +1,151 @@
+/* Variables */
+
+:root {
+  var-primary     : #F5F5F5;
+  var-link        : #E33B7E;
+
+  var-btn         : #403F3F;
+
+  var-accent      : #E33B7E;
+  var-accent-dark : #FF4290;
+
+  var-btn-main    : #3EE49C;
+  var-btn-dark    : #41FFAE;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 21px;
+  line-height: 21px;
+  color: #444444;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #181818;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: 46px;
+  line-height: 50px;
+  margin-bottom: 14px;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: 21px;
+  line-height: 30px;
+  margin-bottom: 4px;
+}
+
+h5 {
+  font-size: 17px;
+  line-height: 24px;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* Full width */
+
+a {
+  color: var(link);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+em {
+  font-weight: bold;
+}
+
+.btn {
+  border: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: normal;
+  padding: 8px 10px;
+  background-color: var(btn-main);
+  color: var(btn);
+}
+
+.btn:hover {
+  background-color: var(btn-dark);
+}
+
+a.btn:hover {
+  text-decoration: none;
+}
+a.btn:visited {
+  color: var(btn);
+}
+
+input[type="submit"] {
+  margin-bottom: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 6px 4px;
+  outline: none;
+  font: 13px "Open Sans", sans-serif;
+  color: #505050;
+  margin: 0;
+  width: 210px;
+  max-width: 100%;
+  display: inline-block;
+  background-color: #fff;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #aaa;
+  color: #444;
+  box-shadow: 0 0 3px rgba(0,0,0,.2);
+}
+
+input[type="submit"] {
+  color: #FFF;
+}
+
+/* Mobile */
+@media screen and (max-width : 480px) {
+
+}
