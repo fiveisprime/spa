@@ -10,10 +10,8 @@ gulp.task('lint', function() {
     'gulpfile.js'
   , 'app.js'
   , 'routes/*.js'
-  , 'client/application.js'
-  , 'client/models.js'
-  , 'client/views.js'
-  , 'client/router.js'
+  , 'public/javascripts/lib/*.js'
+  , 'public/javascripts/app.js'
   ])
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'));
@@ -23,7 +21,7 @@ gulp.task('lint', function() {
 gulp.task('build', function() {
 
   gulp.src('templates/*.hbs')
-    .pipe(hbs({ namespace: 'App.templates' }))
+    .pipe(hbs({ namespace: 'Handlebars.templates' }))
     .pipe(concat('templates.js'))
     .pipe(gulp.dest('public/javascripts'));
 

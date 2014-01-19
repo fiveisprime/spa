@@ -1,3 +1,5 @@
+/* jshint undef: false, unused: false */
+
 define([
   'jquery',
   'backbone',
@@ -11,7 +13,7 @@ function($, Backbone, _, Collections) {
 
   var Index = Backbone.View.extend({
     el: '.container',
-    template: App.templates.index,
+    template: Backbone.templates.index,
     initialize: function() {
       this.render();
     },
@@ -22,6 +24,6 @@ function($, Backbone, _, Collections) {
 
   return {
     Index: Index
-  }
+  };
 
 });
